@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import Header from "@/components/Header";
+import SideLinks from "@/components/SideLinks";
 
 const spacemono = localFont({
   src: "../public/SpaceMono-Regular.ttf"
@@ -24,6 +25,7 @@ export default function RootLayout({
         <div id="grid">
           <div className="flex flex-col min-h-[100vh]">
             <Header />
+            <SideLinks />
             {children}
           </div>
         </div>
