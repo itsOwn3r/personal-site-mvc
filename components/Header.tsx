@@ -56,7 +56,7 @@ const Header = () => {
 
         <div className="block md:hidden">
           <Sheet>
-            <SheetTrigger><Menu className='size-8 text-white' /></SheetTrigger>
+            <SheetTrigger className='cursor-pointer'><Menu className='size-8 text-white' /></SheetTrigger>
             <SheetContent className='bg-[#112240] flex justify-center items-center fixed top-0 right-0 bottom-0 p-[50px_10px] h-full'>
               <SheetHeader className='w-full'>
               <SheetTitle className='hidden'>Menu</SheetTitle>
