@@ -29,14 +29,14 @@ const Header = () => {
           </Link>
         </div>
 
-        <h2 className="hidden lg:block text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <h2 className="hidden xl:block text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
               Own3r
         </h2>
 
         <div className="hidden md:flex items-center links">
           <ol className='flex justify-between items-center p-0 m-0 list-none'>
             <li className='m-[0px_5px] relative counter text-[13px]'>
-              <Link href="#about" className='p-2.5 inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-[#64ffda]'>About</Link>
+              <Link href="#main" className='p-2.5 inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-[#64ffda]'>About</Link>
             </li>
             <li className='m-[0px_5px] relative counter text-[13px]'>
               <Link href="#experience" className='p-2.5 inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-[#64ffda]'>Experience</Link>
@@ -65,7 +65,7 @@ const Header = () => {
 
                     <ol className='p-0 m-0 list-none w-full'>
                       <li className='m-[0px_auto_10px] relative counter text-[13px]'>
-                        <Link href="#about" className='p-[3px_20px_20px] w-full inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-[#64ffda]'>About</Link>
+                        <Link href="#main" className='p-[3px_20px_20px] w-full inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-[#64ffda]'>About</Link>
                       </li>
                       <li className='m-[0px_auto_10px] relative counter text-[13px]'>
                         <Link href="#experience" className='p-[3px_20px_20px] w-full inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-[#64ffda]'>Experience</Link>
