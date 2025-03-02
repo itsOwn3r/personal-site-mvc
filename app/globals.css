@@ -326,11 +326,26 @@ span.verticalemail::after {
 
 
 .projectcontent {
-  grid-area: 1 / 1 / -1 / 7;
+  grid-area: 1 / 1 / -1 / 15;
+}
+
+@media (width >= 48rem /* 768px */) {
+  .projectcontent {
+    grid-area: 1 / 1 / -1 / 7;
+  }
+
+  li:nth-of-type(2n+1) .projectcontent {
+    grid-column: 7 / -1;
+  }
 }
 
 .imagegrid {
   box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
 
   grid-area: 1 / 6 / -1 / -1;
+}
+
+
+li:nth-of-type(2n+1) .imagegrid {
+  grid-column: 1 / 8;
 }
