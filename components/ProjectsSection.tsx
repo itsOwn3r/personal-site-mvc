@@ -1,46 +1,58 @@
-import Image from 'next/image';
-import Link from 'next/link';
+
 import React from 'react'
+import ProjectItem from './ProjectItem';
+
+const PROJECTS = [
+    {
+        title: 'Next JS Ticketing',
+        imageSrc: '/images/ticket.png',
+        isFeatured: true,
+        tech: ["NextJS", "Auth.js", "Prisma", "MondoDB"],
+        description: "Fully functional ticketing system with authentication, diffrent roles, uploading images, selecting department and priority, and more.",
+        projectId: "ticket",
+        code: 'https://github.com/itsOwn3r/nextjs-ticket/',
+        demo: 'https://ticket.own3r.me/'
+    },
+    {
+        title: 'Multi-vendor Digital Products Sore',
+        imageSrc: '/images/mytg.png',
+        isFeatured: true,
+        description: "A multi-vendor digital products store with multi-step authentication, , Admin panel, Blog, and Automated handling sales, fees, sending reports and ...",
+        projectId: "mytg",
+        tech: ["NextJS", "Auth.js", "Shad CN", "Zustand"],
+        demo: 'https://mytg.ir'
+    },
+    {
+        title: 'Clipboard',
+        imageSrc: '/images/clipboard.jpg',
+        isFeatured: true,
+        description:"Clipboard Share with a Web App, Chrome Extention and Telegram bot",
+        projectId: "clipboard",
+        tech: ["Chrome Extention", "Telegram Bot", "Node JS", "QR Code"]
+    },
+    {
+        title: 'Meme Finder',
+        imageSrc: '/images/mem-finder.png',
+        isFeatured: true,
+        tech: ["NextJS", "Gemini", "Prisma", "MondoDB"],
+        description: "Meme Finder with automated importing pics from Threads.net and captioning them + inline Telegram bot to send Memes in Telegram",
+        projectId: "meme",
+        code: 'https://github.com/itsOwn3r/meme-finder',
+        demo: 'https://meme.own3r.me/'
+    },
+]
 
 const ProjectsSection = () => {
   return (
     <section id='projects' className='about p-[100px_0px] max-w-[900px] m-[0px_auto]'>
         <h2 className='numbered-heading text-white flex items-center relative m-[10px_0px_40px] w-full whitespace-nowrap text-[32px]'> Some of my projects</h2>
         <ul className='list-none p-0 m-0'>
-            <li className="grid relative gap-2.5 grid-cols-[repeat(12,1fr)] items-center not-last:mb-24">
-                <div className="projectcontent relative z-20 rounded-xl bg-[#0a192f]">
-                    <div>
-                        <p className='m-[10px_0px] green text-[13px] font-normal text-center'>
-                            Featured Project
-                        </p>
-                        <h3 className='text-white md:text-slate-400 text-[28px] leading-[1.1] font-semibold m-[0px_0px_10px] md:m-[0px_0px_20px] text-center'>
-                            <Link className='relative z-10 hover:text-green' href="/project/ticketing"> Next Js Ticketing App</Link>
-                        </h3>
-                        <div className="description z-10 relative p-6 rounded-lg text-lg text-slate-400 bg-[#112240] cubicTransition">
-                            <p className='m-0'>
-                                Fully functional ticketing system with authentication, diffrent roles, uploading images, selecting department and priority, and more. <br />
-                                <span className='w-full block text-center'>
-                                    <span className='md:hidden'><Link className='text-green hover:text-green/60' href="/images/ticket.png" target='_blank' rel='noopener noreferrer'>Screenshot</Link> - {" "}</span>
-                                    <Link className='text-green hover:text-green/60' href="https://ticket.own3r.me" target='_blank' rel='noopener noreferrer'>Demo</Link> - {" "}
-                                    <Link className='text-green hover:text-green/60' href="https://github.com/itsOwn3r/nextjs-ticket/" target='_blank' rel='noopener noreferrer'>Code</Link>
-                                </span>
-                            </p>
-                        </div>
-                        <ul className="techlist flex justify-start flex-wrap relative z-10 m-[25px_0px_10px] p-0 list-none">
-                            <li className='m-[0px_0px_5px_20px] text-slate-400 whitespace-nowrap'>Next JS</li>
-                            <li className='m-[0px_0px_5px_20px] text-slate-400 whitespace-nowrap'>Auth.js</li>
-                            <li className='m-[0px_0px_5px_20px] text-slate-400 whitespace-nowrap'>Prisma</li>
-                            <li className='m-[0px_0px_5px_20px] text-slate-400 whitespace-nowrap'>MondoDB</li>
-                        </ul>
-                    </div>
-                </div>
+            {PROJECTS.map((project) => (
+                <ProjectItem key={project.projectId} title={project.title} imageSrc={project.imageSrc}
+                    tech={project.tech} isFeatured projectId={project.projectId}
+                    description={project.description} code={project.code} demo={project.demo} />                
+            ))}
 
-                <div className="hidden md:block image cubicTransition relative z-10 imagegrid">
-                    <div className="w-full max-w-[700px] h-[350px]">
-                        <Image src="/images/ticket.png" alt='Next JS ticketing app' fill />
-                    </div>
-                </div>
-            </li>
         </ul>
     </section>
   )
