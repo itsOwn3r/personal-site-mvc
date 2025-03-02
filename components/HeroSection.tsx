@@ -29,7 +29,7 @@ const HeroSection = () => {
             </div>
 
             <div className='hover:scale-105 mt-6 w-full flex justify-center'>
-                <Link className='bg-transparent text-[#64ffda] border border-[#64ffda] rounded-md p-[0.75rem_2rem] leading-[1.4] cubicTransition duration-1000 text-[16px] resumeAnimation' href="#" target="_blank" rel="noopener noreferrer">Resume</Link>
+                <Link className='bg-transparent text-green border border-[#64ffda] rounded-md p-[0.75rem_2rem] leading-[1.4] cubicTransition duration-1000 text-[16px] resumeAnimation' href="#" target="_blank" rel="noopener noreferrer">Resume</Link>
             </div>
         </div>
     </div> 

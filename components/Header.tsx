@@ -36,18 +36,18 @@ const Header = () => {
         <div className="hidden md:flex items-center links">
           <ol className='flex justify-between items-center p-0 m-0 list-none'>
             <li className='m-[0px_5px] relative counter text-[13px]'>
-              <Link href="#about" className='p-2.5 inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-[#64ffda]'>About</Link>
+              <Link href="#about" className='p-2.5 inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-green'>About</Link>
             </li>
             <li className='m-[0px_5px] relative counter text-[13px]'>
-              <Link href="#projects" className='p-2.5 inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-[#64ffda]'>Projects</Link>
+              <Link href="#projects" className='p-2.5 inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-green'>Projects</Link>
             </li>
             <li className='m-[0px_5px] relative counter text-[13px]'>
-              <Link href="#contact" className='p-2.5 inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-[#64ffda]'>Contact</Link>
+              <Link href="#contact" className='p-2.5 inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-green'>Contact</Link>
             </li>
           </ol>
 
           <div className='hover:scale-105'>
-            <Link className='bg-transparent text-[#64ffda] border border-[#64ffda] rounded-md p-[0.75rem_1rem] leading-[1] cubicTransition duration-1000 ml-[15px] text-[13px] resumeAnimation' href="#" target="_blank" rel="noopener noreferrer">Resume</Link>
+            <Link className='bg-transparent text-green border border-[#64ffda] rounded-md p-[0.75rem_1rem] leading-[1] cubicTransition duration-1000 ml-[15px] text-[13px] resumeAnimation' href="#" target="_blank" rel="noopener noreferrer">Resume</Link>
           </div>
         </div>
 
@@ -62,18 +62,18 @@ const Header = () => {
 
                     <ol className='p-0 m-0 list-none w-full'>
                       <li className='m-[0px_auto_10px] relative counter text-[13px]'>
-                        <Link href="#about" className='p-[3px_20px_20px] w-full inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-[#64ffda]'>About</Link>
+                        <Link href="#about" className='p-[3px_20px_20px] w-full inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-green'>About</Link>
                       </li>
                       <li className='m-[0px_auto_10px] relative counter text-[13px]'>
-                        <Link href="#projects" className='p-[3px_20px_20px] w-full inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-[#64ffda]'>Projects</Link>
+                        <Link href="#projects" className='p-[3px_20px_20px] w-full inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-green'>Projects</Link>
                       </li>
                       <li className='m-[0px_auto_10px] relative counter text-[13px]'>
-                        <Link href="#contact" className='p-[3px_20px_20px] w-full inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-[#64ffda]'>Contact</Link>
+                        <Link href="#contact" className='p-[3px_20px_20px] w-full inline-block decoration-0 relative cubicTransition text-slate-300 hover:text-green'>Contact</Link>
                       </li>
                     </ol>
 
                     <div className='hover:scale-105 w-full'>
-                      <Link className='flex justify-center items-center bg-transparent text-[#64ffda] border border-[#64ffda] rounded-md p-4 leading-[1] cubicTransition duration-1000 ml-[15px] text-[16px] resumeAnimation' href="#" target="_blank" rel="noopener noreferrer">Resume</Link>
+                      <Link className='flex justify-center items-center bg-transparent text-green border border-[#64ffda] rounded-md p-4 leading-[1] cubicTransition duration-1000 ml-[15px] text-[16px] resumeAnimation' href="#" target="_blank" rel="noopener noreferrer">Resume</Link>
                     </div>
 
                   </nav>

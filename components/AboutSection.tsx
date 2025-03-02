@@ -5,7 +5,7 @@ import React from 'react'
 const AboutSection = () => {
   return (
     <section id='about' className='about p-[100px_0px] max-w-[900px] m-[0px_auto]'>
-        <h2 className='numbered-heading flex items-center relative m-[10px_0px_40px] w-full whitespace-nowrap text-[32px]'> About Me</h2>
+        <h2 className='numbered-heading text-white flex items-center relative m-[10px_0px_40px] w-full whitespace-nowrap text-[32px]'> About Me</h2>
         <div className="grid grid-cols-[3fr_2fr] gap-12">
             <div>
                 Hello! My name is <span className='green'>Own3r</span> and I enjoy creating Web Applications that solve problems.
@@ -14,7 +14,7 @@ const AboutSection = () => {
                 <br /><br />
 
                 <div className='hover:scale-105 mt-6 w-full flex justify-center'>
-                    <Link className='bg-transparent text-[#64ffda] border border-[#64ffda] rounded-md p-[0.75rem_2rem] leading-[1.4] cubicTransition duration-1000 text-[16px] resumeAnimation' href="#work">My Projects</Link>
+                    <Link className='bg-transparent text-green border border-[#64ffda] rounded-md p-[0.75rem_2rem] leading-[1.4] cubicTransition duration-1000 text-[16px] resumeAnimation' href="#work">My Projects</Link>
                 </div>
             </div>
             <div className='relative max-w-[300px]'>

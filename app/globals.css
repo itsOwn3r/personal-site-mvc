@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
@@ -7,6 +6,7 @@
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-green: #64ffda;
 }
 
 :root {
@@ -144,6 +144,7 @@ body{
     color: #8892b0;
     font-size: 20px;
     line-height: 1.3;
+    counter-reset: section;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -321,4 +322,15 @@ span.verticalemail::after {
     position: absolute;
     inset: 0px;
     object-fit: cover;
+}
+
+
+.projectcontent {
+  grid-area: 1 / 1 / -1 / 7;
+}
+
+.imagegrid {
+  box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+
+  grid-area: 1 / 6 / -1 / -1;
 }
