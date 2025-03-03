@@ -3,6 +3,7 @@ import React, { FormEvent, useState } from 'react'
 import { Input } from "@/components/ui/input"
 import { Button } from './ui/button';
 import { Send } from 'lucide-react';
+import { isEmailValid } from '@/lib/isEmailValid';
 
 const Contact = () => {
 
@@ -22,6 +23,13 @@ const Contact = () => {
 
         setError("");
 
+        const validateEmail = isEmailValid(formData.email);
+
+        if (!validateEmail || formData.email.length < 10 || !formData.email.includes("@") || !formData.email.includes(".")) {
+            setError("Something is up with your email...");
+            return;
+        }
+
         if (!formData.name || !formData.email || !formData.message) {
             setError("You must enter all required inputs!");
             return;
@@ -32,10 +40,6 @@ const Contact = () => {
             return;
         }
 
-        if (formData.email.length < 10 || !formData.email.includes("@") || !formData.email.includes(".")) {
-            setError("Something is up with your email...");
-            return;
-        }
 
         if (formData.message.length < 20) {
             setError("Tell me more...");
