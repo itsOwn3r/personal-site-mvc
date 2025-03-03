@@ -4,6 +4,7 @@ import AboutSection from './AboutSection';
 import ProjectsSection from './ProjectsSection';
 import OtherProjectsSection from './OtherProjectsSection';
 import Contact from './Contact';
+import Footer from './Footer';
 
 const Content = () => {
   return (
@@ -14,6 +15,7 @@ const Content = () => {
             <ProjectsSection />
             <OtherProjectsSection />
             <Contact />
+            <Footer />
         </main>
     </div>
   )

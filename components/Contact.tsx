@@ -15,7 +15,7 @@ const Contact = () => {
     const [error, setError] = useState("");
     const [isSuccessful, setIsSuccessful] = useState(false);
 
-    console.log(formData);
+
 
     const handleSend = async (e: FormEvent) => {
         e.preventDefault();
@@ -102,7 +102,7 @@ const Contact = () => {
 
 
             <div className='hover:scale-115 mt-8 w-full flex justify-center'>
-                <Button  className='w-full max-w-[20%] bg-transparent hover:bg-transparent cursor-pointer text-green border border-green rounded-md p-[1.5rem_6rem] leading-[1.6] cubicTransition duration-1000 text-[19px] resumeAnimation'>Send <Send /></Button>
+                <Button  className='w-full max-w-[50%] md:max-w-[20%] bg-transparent hover:bg-transparent cursor-pointer text-green border border-green rounded-md p-[1.5rem_6rem] leading-[1.6] cubicTransition duration-1000 text-[19px] resumeAnimation'>Send <Send /></Button>
             </div>
 
         </form>

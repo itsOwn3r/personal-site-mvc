@@ -14,7 +14,7 @@ const AboutSection = () => {
                 <br /><br />
 
                 <div className='hover:scale-105 mt-6 w-full flex justify-center'>
-                    <Link className='bg-transparent text-green border border-[#64ffda] rounded-md p-[0.75rem_2rem] leading-[1.4] cubicTransition duration-1000 text-[16px] resumeAnimation' href="#work">My Projects</Link>
+                    <Link className='bg-transparent text-green border border-[#64ffda] rounded-md p-[0.75rem_2rem] leading-[1.4] cubicTransition duration-1000 text-[16px] resumeAnimation' href="#projects">My Projects</Link>
                 </div>
             </div>
             <div className='relative max-w-[300px]'>
