@@ -19,7 +19,7 @@ const Header = () => {
   const height = useScreenScroll();
 
   return (
-    <header style={{height: height || 100}} className='flex justify-between items-center fixed top-0 z-50 p-[0_50px] w-full bg-[#0a192fd9] cubicTransition'>
+    <header style={{height: height || 100}} className='header flex justify-between items-center fixed top-0 z-50 p-[0_50px] w-full bg-[#0a192fd9] cubicTransition'>
       <nav className='flex justify-between items-center relative w-full z-20'>
         <div className="logo flex justify-center items-center text-slate-300">
           <Link href="/" className='text-green-500 w-10 h-10 relative z-[1]'>

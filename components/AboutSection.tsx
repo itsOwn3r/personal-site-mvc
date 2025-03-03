@@ -10,7 +10,7 @@ const AboutSection = () => {
             <div>
                 Hello! My name is <span className='green'>Own3r</span> and I enjoy creating Web Applications that solve problems.
                 <br /><br />
-                I have created a wide range of projects, from simple Chrome Extentions, Wordpress Plugins, Bash and Batch scripts to fully functional modern Web Applications with <span className='green'>Next JS</span>.
+                I have created a wide range of projects, from simple Chrome Extensions, Wordpress Plugins, Bash and Batch scripts to fully functional modern Web Applications with <span className='green'>Next JS</span>.
                 <br /><br />
 
                 <div className='hover:scale-105 mt-6 w-full flex justify-center'>
