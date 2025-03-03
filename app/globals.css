@@ -240,7 +240,7 @@ span.verticalemail::after {
     font-weight: 400;
 }
 
-.numbered-heading::after {
+.numbered-heading:not(:last-of-type)::after {
   content: "";
   display: block;
   position: relative;

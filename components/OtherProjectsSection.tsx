@@ -1,6 +1,7 @@
 import React from 'react'
 import OtherProjectsItem from './OtherProjectsItem';
 import { OTHER_PROJECTS } from '@/data/other_projects';
+import { Button } from './ui/button';
 
 const OtherProjectsSection = () => {
   return (
@@ -13,6 +14,10 @@ const OtherProjectsSection = () => {
         ))}
 
        </ul>
+       {/* TODO: add show more functionality */}
+       <div className='hover:scale-115 mt-16 w-full flex justify-center'>
+            <Button className='bg-transparent hover:bg-transparent cursor-pointer text-green border border-[#64ffda] rounded-md p-[1.5rem_3rem] leading-[1.6] cubicTransition duration-1000 text-[19px] resumeAnimation'>Show More</Button>
+        </div>
     </section>
   )
 }
