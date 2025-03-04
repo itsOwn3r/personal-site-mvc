@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import SideLinks from "@/components/SideLinks";
 import { Github, Instagram, Linkedin, MessageSquare, Send } from 'lucide-react';
 import Link from 'next/link';
+import StoreProvider from "./StoreProvider";
 
 const spacemono = localFont({
   src: "../public/SpaceMono-Regular.ttf"
@@ -51,7 +52,10 @@ export default function RootLayout({
               </div>
             </SideLinks>
 
-            {children}
+            <StoreProvider>
+                {children}
+            </StoreProvider>
+            
           </div>
         </div>
         
