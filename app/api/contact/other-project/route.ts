@@ -1,27 +1,6 @@
 import { NextResponse } from "next/server";
 
-export const config = {
-    api: {
-        bodyParser: true,
-        externalResolver: true,
-    },
-};
 
-export async function OPTIONS(request: Request) {
-    const allowedOrigin = request.headers.get("origin");
-    const response = new NextResponse(null, {
-      status: 200,
-      headers: {
-        "Access-Control-Allow-Origin": allowedOrigin || "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers":
-          "Content-Type, Authorization, X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Date, X-Api-Version",
-        "Access-Control-Max-Age": "86400",
-      },
-    });
-  
-    return response;
-  }
 
 export async function POST(req: Request) {
     try {
@@ -30,17 +9,32 @@ export async function POST(req: Request) {
         const { name, phone, message } = data;
 
         if (!name || !phone || !message) {
-            return NextResponse.json({ success: false, message: "You must enter all required inputs!" });
+            return NextResponse.json({ success: false, message: "You must enter all required inputs!" }, {
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+                } });
         }
 
         if (name.length < 3) {
-            return NextResponse.json({ success: false, message: "Something is up with your name..." });
+            return NextResponse.json({ success: false, message: "Something is up with your name..." }, {
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+                } });
         }
 
         const isPhoneValid = new RegExp(/^09\d{9}$/).test(phone);
 
         if (!isPhoneValid) {
-            return NextResponse.json({ success: false, message: "Something is up with your Phone..." });
+            return NextResponse.json({ success: false, message: "Something is up with your Phone..." }, {
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+                } });
         }
 
         // Sending message to Telegram
@@ -48,7 +42,12 @@ export async function POST(req: Request) {
         const chatId = process.env.chatId;
 
         if (!botToken || !chatId) {
-            return NextResponse.json({ success: false, message: "Sending message to owner of this website is not configured yet!" });
+            return NextResponse.json({ success: false, message: "Sending message to owner of this website is not configured yet!" }, {
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+                } });
         }
 
         const request = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
@@ -63,14 +62,38 @@ export async function POST(req: Request) {
         const response = await request.json();
 
         if (response.ok) {
-            return NextResponse.json({ success: true, message: "Sending message was successful!" });
+            return NextResponse.json({ success: true, message: "Sending message was successful!" }, {
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+                } });
         } else {
-            return NextResponse.json({ success: false, message: "Sending message was not successful!" });
+            return NextResponse.json({ success: false, message: "Sending message was not successful!" }, {
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+                } });
         }
     } catch (error) {
         console.log(error);
-        return NextResponse.json({ success: false, message: "Something went wrong!" });
+        return NextResponse.json({ success: false, message: "Something went wrong!" }, {
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+            } });
     }
 }
 
-export const runtime = 'edge';
+export async function OPTIONS() {
+    return new Response(null, {
+      status: 204,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      },
+    });
+  }
