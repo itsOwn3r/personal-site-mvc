@@ -7,6 +7,16 @@ export const config = {
     },
 };
 
+export function middleware() {
+    return new Response(null, {
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type',
+        },
+    });
+}
+
 export async function POST(req: Request) {
     try {
         const data = await req.json();
